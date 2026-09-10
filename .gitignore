@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# Virtual environment
+.venv/
+env/git status
+
+# Dataset (DON'T upload these)
+dataset/raw/
+dataset/processed/
+dataset/training/
+
+# Models
+models/
+*.keras
+*.h5
+
+# VS Code
+.vscode/
+
+# OS files
+.DS_Store
+Thumbs.db
+
