@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>About — SanketSetu</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/about.css">
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header class="site-header">
+
+        <nav class="navbar">
+
+            <a href="index.html" class="logo">
+                <span class="logo-mark">S.</span>
+                <span class="logo-text">SanketSetu</span>
+            </a>
+
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="detect.html">Detect</a>
+                <a href="learn.html">Learn ISL</a> 
+                <a href="insights.html">Insights</a>
+                <a href="about.html" class="active">About</a>
+            </div>
+
+            <div class="nav-actions">
+
+                <button class="theme-toggle" aria-label="Toggle theme">
+                    ☾
+                </button>
+
+                <a href="detect.html" class="nav-cta">
+                    Start Detection
+                    <span>→</span>
+                </a>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+
+    <!-- ================= HERO ================= -->
+
+    <main>
+
+        <section class="about-hero">
+
+            <div class="about-hero-main">
+
+                <span class="eyebrow">ABOUT SANKETSETU</span>
+
+                <h1>
+                    Understanding
+                    <em>movement.</em>
+                </h1>
+
+            </div>
+
+            <div class="about-hero-copy">
+
+                <p>
+                    SanketSetu is an AI-powered Indian Sign Language
+                    gesture recognition system designed to understand
+                    hand movements through temporal deep learning.
+                </p>
+
+                <p>
+                    Instead of looking at one frame at a time,
+                    SanketSetu learns from a sequence of hand
+                    movements to recognize gestures.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= INTRO ================= -->
+
+        <section class="about-intro">
+
+            <div class="about-intro-content">
+
+                <span class="section-label">
+                    THE IDEA
+                </span>
+
+                <h2>
+                    A gesture is
+                    <em>more than a frame.</em>
+                </h2>
+
+                <p>
+                    Sign language is expressed through movement.
+                    A hand position can change from one moment to
+                    the next, and that sequence carries information.
+                </p>
+
+                <p>
+                    SanketSetu approaches gesture recognition as a
+                    temporal learning problem. The system first
+                    extracts hand landmarks from video and then
+                    processes those landmarks as a sequence.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= PIPELINE ================= -->
+
+        <section class="pipeline-section">
+
+            <div class="section-top">
+
+                <div>
+
+                    <span class="eyebrow">THE PIPELINE</span>
+
+                    <h2>
+                        From camera
+                        <em>to meaning.</em>
+                    </h2>
+
+                </div>
+
+                <p>
+                    Each stage transforms the incoming movement into
+                    a representation that the model can understand.
+                </p>
+
+            </div>
+
+
+            <div class="pipeline">
+
+                <!-- STEP 01 -->
+
+                <div class="pipeline-step">
+
+                    <div class="pipeline-index">
+                        01
+                    </div>
+
+                    <div class="pipeline-icon">
+                        ◌
+                    </div>
+
+                    <div class="pipeline-content">
+
+                        <span>INPUT</span>
+
+                        <h3>Camera</h3>
+
+                        <p>
+                            Video provides the sequence of hand
+                            movements that SanketSetu needs to analyze.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- STEP 02 -->
+
+                <div class="pipeline-connector"></div>
+
+
+                <!-- STEP 03 -->
+
+                <div class="pipeline-step">
+
+                    <div class="pipeline-index">
+                        02
+                    </div>
+
+                    <div class="pipeline-icon">
+                        ◇
+                    </div>
+
+                    <div class="pipeline-content">
+
+                        <span>LANDMARK EXTRACTION</span>
+
+                        <h3>MediaPipe</h3>
+
+                        <p>
+                            MediaPipe identifies 21 hand landmarks,
+                            with three coordinates for each point.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="pipeline-connector"></div>
+
+
+                <!-- STEP 03 -->
+
+                <div class="pipeline-step">
+
+                    <div class="pipeline-index">
+                        03
+                    </div>
+
+                    <div class="pipeline-icon">
+                        ≋
+                    </div>
+
+                    <div class="pipeline-content">
+
+                        <span>TEMPORAL INPUT</span>
+
+                        <h3>Sequence</h3>
+
+                        <p>
+                            The landmark coordinates form a
+                            154-frame sequence containing 63 features
+                            per frame.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="pipeline-connector"></div>
+
+
+                <!-- STEP 04 -->
+
+                <div class="pipeline-step pipeline-highlight">
+
+                    <div class="pipeline-index">
+                        04
+                    </div>
+
+                    <div class="pipeline-icon">
+                        ✦
+                    </div>
+
+                    <div class="pipeline-content">
+
+                        <span>DEEP LEARNING</span>
+
+                        <h3>Transformer V5.2</h3>
+
+                        <p>
+                            The Transformer learns temporal
+                            relationships across the sequence of
+                            hand landmarks.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="pipeline-connector"></div>
+
+
+                <!-- STEP 05 -->
+
+                <div class="pipeline-step">
+
+                    <div class="pipeline-index">
+                        05
+                    </div>
+
+                    <div class="pipeline-icon">
+                        →
+                    </div>
+
+                    <div class="pipeline-content">
+
+                        <span>OUTPUT</span>
+
+                        <h3>Gesture Prediction</h3>
+
+                        <p>
+                            The model predicts one of 210 trained
+                            Indian Sign Language gesture classes.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= NUMBERS ================= -->
+
+        <section class="about-numbers">
+
+            <div class="number-card">
+
+                <span>GESTURE CLASSES</span>
+
+                <strong>210</strong>
+
+                <p>
+                    ISL classes represented in the model.
+                </p>
+
+            </div>
+
+
+            <div class="number-card">
+
+                <span>FRAMES / SEQUENCE</span>
+
+                <strong>154</strong>
+
+                <p>
+                    Temporal frames used for each input sequence.
+                </p>
+
+            </div>
+
+
+            <div class="number-card">
+
+                <span>FEATURES / FRAME</span>
+
+                <strong>63</strong>
+
+                <p>
+                    Three coordinates across 21 hand landmarks.
+                </p>
+
+            </div>
+
+
+            <div class="number-card number-card-accent">
+
+                <span>TEST ACCURACY</span>
+
+                <strong>89.76%</strong>
+
+                <p>
+                    Final accuracy measured on the test set.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= TECHNOLOGY ================= -->
+
+        <section class="technology-section">
+
+            <div class="technology-heading">
+
+                <span class="eyebrow">TECHNOLOGY</span>
+
+                <h2>
+                    The tools behind
+                    <em>the system.</em>
+                </h2>
+
+            </div>
+
+
+            <div class="technology-list">
+
+                <div class="technology-item">
+
+                    <span class="tech-number">01</span>
+
+                    <div>
+                        <h3>Python</h3>
+                        <p>
+                            Core programming environment for the
+                            machine-learning pipeline.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="technology-item">
+
+                    <span class="tech-number">02</span>
+
+                    <div>
+                        <h3>TensorFlow / Keras</h3>
+                        <p>
+                            Framework used to build and train the
+                            Transformer model.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="technology-item">
+
+                    <span class="tech-number">03</span>
+
+                    <div>
+                        <h3>MediaPipe</h3>
+                        <p>
+                            Used to extract hand landmark coordinates
+                            from visual input.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="technology-item">
+
+                    <span class="tech-number">04</span>
+
+                    <div>
+                        <h3>NumPy</h3>
+                        <p>
+                            Used for numerical processing and handling
+                            the landmark sequences.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= CLOSING ================= -->
+
+        <section class="about-closing">
+
+            <div class="closing-card">
+
+                <span class="eyebrow">
+                    SANKETSETU
+                </span>
+
+                <h2>
+                    Bridging hands.
+                    <em>Building understanding.</em>
+                </h2>
+
+                <p>
+                    A deep-learning project built around the idea that
+                    meaningful communication can begin with understanding
+                    movement.
+                </p>
+
+                <a href="detect.html" class="closing-button">
+                    Try Detection
+                    <span>→</span>
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+
+        <div class="footer-brand">
+
+            <div class="brand">
+
+                <span class="brand-mark">S.</span>
+
+                <span class="brand-name">SanketSetu</span>
+
+            </div>
+
+            <p>
+                Bridging hands.<br>
+                Building understanding.
+            </p>
+
+        </div>
+
+
+        <div class="footer-links">
+
+            <div>
+                <span>EXPLORE</span>
+
+                <a href="detect.html">Detect</a>
+                <a href="learn.html">Learn ISL</a> 
+            </div>
+
+
+            <div>
+                <span>PROJECT</span>
+
+                <a href="insights.html">Model Insights</a>
+                <a href="about.html">About SanketSetu</a>
+            </div>
+
+        </div>
+
+    </footer>
+
+<script>
+    const themeToggle = document.querySelector(".theme-toggle");
+
+    const savedTheme = localStorage.getItem("sanketsetu-theme");
+
+    if (savedTheme) {
+        document.documentElement.setAttribute("data-theme", savedTheme);
+    }
+
+    themeToggle?.addEventListener("click", () => {
+
+        const currentTheme =
+            document.documentElement.getAttribute("data-theme");
+
+        const newTheme =
+            currentTheme === "light" ? "dark" : "light";
+
+        document.documentElement.setAttribute(
+            "data-theme",
+            newTheme
+        );
+
+        localStorage.setItem(
+            "sanketsetu-theme",
+            newTheme
+        );
+    });
+</script>
+
+ 
+</body>
+</html>

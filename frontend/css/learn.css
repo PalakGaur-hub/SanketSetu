@@ -1,0 +1,492 @@
+/* =========================================
+   SANKETSETU — LEARN ISL
+   ========================================= */
+
+/* ---------- LEARN HERO ---------- */
+
+.learn-hero {
+    width: min(1240px, calc(100% - 64px));
+
+    margin: 0 auto;
+
+    padding: 70px 0 75px;
+
+    display: grid;
+
+    grid-template-columns: 1.05fr 0.95fr;
+gap: 35px;
+
+    align-items: end;
+}
+
+.learn-heading h1 {
+    margin: 0;
+
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(64px, 7vw, 96px);
+    font-weight: 400;
+    line-height: 0.95;
+    letter-spacing: -4px;
+}
+
+.learn-heading h1 em {
+    display: block;
+
+    color: var(--peach);
+
+    font-weight: 400;
+}
+
+.learn-intro {
+    max-width: 460px;
+
+    padding-bottom: 8px;
+
+    justify-self: end;
+}
+
+.learn-intro p {
+    margin: 0;
+
+    color: var(--text-muted);
+
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+/* ---------- SEARCH ---------- */
+
+.learn-controls {
+    width: min(1240px, calc(100% - 64px));
+    margin: 0 auto;
+
+    padding-bottom: 100px;
+}
+
+.search-box {
+    width: 100%;
+    height: 62px;
+
+    display: flex;
+    align-items: center;
+    gap: 14px;
+
+    padding: 0 22px;
+
+    border: 1px solid var(--border);
+    border-radius: 18px;
+
+    background: rgba(255, 255, 255, 0.025);
+
+    transition:
+        border var(--transition),
+        background var(--transition);
+}
+
+.search-box:focus-within {
+    border-color: var(--border-hover);
+    background: rgba(255, 255, 255, 0.04);
+}
+
+.search-icon {
+    color: var(--peach);
+
+    font-size: 24px;
+    line-height: 1;
+}
+
+.search-box input {
+    width: 100%;
+
+    border: none;
+    outline: none;
+
+    background: transparent;
+
+    color: var(--text-main);
+
+    font-family: inherit;
+    font-size: 15px;
+}
+
+.search-box input::placeholder {
+    color: var(--text-soft);
+}
+
+
+/* ---------- GESTURE SECTION ---------- */
+
+.gesture-section {
+    width: min(1240px, calc(100% - 64px));
+    margin: 0 auto;
+
+    padding: 0 0 120px;
+}
+
+.gesture-header {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+
+    padding-bottom: 28px;
+
+    border-bottom: 1px solid var(--border);
+}
+
+.gesture-header h2 {
+    margin: 0;
+
+    font-family: 'Playfair Display', serif;
+
+    font-size: clamp(36px, 4vw, 52px);
+    font-weight: 400;
+
+    letter-spacing: -1.5px;
+}
+
+.gesture-count {
+    padding-bottom: 6px;
+
+    color: var(--text-soft);
+
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+
+/* ---------- GESTURE GRID ---------- */
+
+.gesture-grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 18px;
+
+    padding-top: 28px;
+}
+
+
+/* ---------- GESTURE CARD ---------- */
+
+.gesture-card {
+    overflow: hidden;
+
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+
+    background: var(--bg-surface);
+
+    transition:
+        transform var(--transition),
+        border var(--transition),
+        box-shadow var(--transition);
+}
+
+.gesture-card:hover {
+    transform: translateY(-5px);
+
+    border-color: var(--border-hover);
+
+    box-shadow: var(--shadow-soft);
+}
+
+
+/* ---------- GESTURE VISUAL ---------- */
+
+.gesture-visual {
+    position: relative;
+
+    height: 260px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 50% 45%,
+            rgba(216, 168, 150, 0.18),
+            transparent 55%
+        ),
+        linear-gradient(
+            145deg,
+            #242129,
+            #1d1b21
+        );
+}
+
+.gesture-visual::before,
+.gesture-visual::after {
+    content: "";
+
+    position: absolute;
+
+    border: 1px solid rgba(216, 168, 150, 0.14);
+
+    border-radius: 50%;
+}
+
+.gesture-visual::before {
+    width: 190px;
+    height: 190px;
+}
+
+.gesture-visual::after {
+    width: 125px;
+    height: 125px;
+}
+
+.gesture-visual span {
+    position: relative;
+    z-index: 2;
+
+    color: var(--peach-soft);
+
+    font-family: 'Playfair Display', serif;
+    font-size: 26px;
+    font-style: italic;
+}
+
+
+/* ---------- GESTURE INFO ---------- */
+
+.gesture-info {
+    min-height: 92px;
+
+    padding: 18px 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    border-top: 1px solid var(--border);
+}
+
+.gesture-info h3 {
+    margin: 0 0 5px;
+
+    color: var(--text-main);
+
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.gesture-info p {
+    margin: 0;
+
+    color: var(--text-soft);
+
+    font-size: 12px;
+}
+
+.gesture-arrow {
+    width: 32px;
+    height: 32px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid var(--border);
+    border-radius: 50%;
+
+    color: var(--peach);
+
+    transition:
+        background var(--transition),
+        transform var(--transition);
+}
+
+.gesture-card:hover .gesture-arrow {
+    background: var(--peach);
+    color: var(--bg-main);
+
+    transform: translate(2px, -2px);
+}
+
+
+/* =========================================
+   FOOTER
+   ========================================= */
+
+.footer {
+    width: min(1240px, calc(100% - 64px));
+
+    margin: 40px auto 0;
+
+    padding: 70px 0 45px;
+
+    border-top: 1px solid var(--border);
+
+    display: flex;
+    justify-content: space-between;
+    gap: 80px;
+}
+
+.footer-brand {
+    min-width: 250px;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+
+    color: var(--text-main);
+
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.brand-mark {
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: var(--peach);
+    color: var(--bg-main);
+
+    font-family: 'Playfair Display', serif;
+    font-size: 19px;
+}
+
+.footer-brand p {
+    margin-top: 30px;
+
+    color: var(--text-muted);
+
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.footer-links {
+    display: flex;
+    gap: 130px;
+}
+
+.footer-links > div {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.footer-links span {
+    margin-bottom: 5px;
+
+    color: var(--text-soft);
+
+    font-size: 10px;
+    font-weight: 600;
+
+    letter-spacing: 2px;
+}
+
+.footer-links a {
+    color: var(--text-muted);
+
+    font-size: 14px;
+
+    transition: color var(--transition);
+}
+
+.footer-links a:hover {
+    color: var(--text-main);
+}
+
+
+/* =========================================
+   RESPONSIVE
+   ========================================= */
+
+@media (max-width: 1000px) {
+
+    .learn-hero {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .learn-intro {
+        max-width: 550px;
+    }
+
+    .gesture-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer-links {
+        gap: 70px;
+    }
+}
+
+
+@media (max-width: 700px) {
+
+    .learn-hero,
+    .learn-controls,
+    .gesture-section,
+    .footer {
+        width: calc(100% - 32px);
+    }
+
+    .learn-hero {
+        padding: 75px 0 55px;
+    }
+
+    .learn-heading h1 {
+        font-size: 58px;
+        letter-spacing: -2px;
+    }
+
+    .gesture-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gesture-header {
+        align-items: start;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .footer {
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .footer-links {
+        gap: 70px;
+    }
+}
+
+
+@media (max-width: 450px) {
+
+    .learn-heading h1 {
+        font-size: 48px;
+    }
+
+    .footer-links {
+        gap: 40px;
+    }
+
+    .gesture-visual {
+        height: 230px;
+    }
+}
+/* Actual ISL gesture images */
+.gesture-visual img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+    display: block;
+
+    border-radius: inherit;
+}

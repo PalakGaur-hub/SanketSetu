@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Live Detection — SanketSetu</title>
+
+    <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/detect.css">
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header class="navbar">
+
+        <a href="index.html" class="logo">
+    <span class="logo-mark">S.</span>
+    <span class="logo-text">SanketSetu</span>
+</a>
+
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="detect.html" class="active">Detect</a>
+            <a href="learn.html">Learn ISL</a> 
+            <a href="insights.html">Insights</a>
+            <a href="about.html">About</a>
+        </nav>
+
+        <div class="nav-actions">
+            <button class="theme-toggle" aria-label="Toggle theme">
+                ☾
+            </button>
+
+            <a href="detect.html" class="nav-cta">
+                Start Detection
+                <span>↗</span>
+            </a>
+        </div>
+
+    </header>
+
+
+    <!-- ================= PAGE INTRO ================= -->
+
+    <main>
+
+        <section class="detect-intro">
+
+            <div>
+                <p class="eyebrow">LIVE DETECTION</p>
+
+                <h1>
+                    Let your hands
+                    <em>speak.</em>
+                </h1>
+            </div>
+
+            <p class="detect-description">
+                Position your hand inside the camera frame.
+                SanketSetu will analyze the movement and recognize
+                the corresponding Indian Sign Language gesture.
+            </p>
+
+        </section>
+
+
+        <!-- ================= DETECTION AREA ================= -->
+
+        <section class="detection-workspace">
+
+            <!-- CAMERA -->
+
+            <div class="camera-panel">
+
+                <div class="panel-header">
+                    <div class="panel-label">
+                        <span class="status-dot"></span>
+                        Camera
+                    </div>
+
+                    <span class="frame-count">
+                        0 / 154 frames
+                    </span>
+                </div>
+
+
+                <div class="camera-view">
+
+                    <div class="camera-placeholder">
+
+                        <div class="camera-icon">
+                            ◉
+                        </div>
+
+                        <h2>Camera ready</h2>
+
+                        <p>
+                            Start the camera to begin gesture recognition.
+                        </p>
+
+                        <button class="start-camera-btn">
+                            Start Camera
+                            <span>↗</span>
+                        </button>
+
+                    </div>
+
+                    <!-- Webcam will eventually appear here -->
+                    <video
+                        id="camera"
+                        autoplay
+                        playsinline>
+                    </video>
+
+                    <!-- MediaPipe landmarks will eventually be drawn here -->
+                    <canvas id="landmark-canvas"></canvas>
+
+                </div>
+
+
+                <div class="camera-controls">
+
+                    <button class="control-btn" id="camera-toggle">
+                        Camera
+                    </button>
+
+                    <button class="control-btn" id="reset-detection">
+                        Reset
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- PREDICTION -->
+
+            <aside class="prediction-panel">
+
+                <div class="panel-header">
+                    <span class="panel-label">
+                        Current Prediction
+                    </span>
+
+                    <span class="prediction-status">
+                        Waiting
+                    </span>
+                </div>
+
+
+                <div class="prediction-main">
+
+                    <p class="prediction-label">
+                        GESTURE
+                    </p>
+
+                    <h2 id="gesture-name">
+                        —
+                    </h2>
+
+                    <p id="gesture-meaning">
+                        Position your hand in the camera frame.
+                    </p>
+
+                </div>
+
+
+                <div class="confidence-section">
+
+                    <div class="confidence-ring">
+
+                        <div class="confidence-value">
+                            <strong id="confidence-value">0%</strong>
+                            <span>confidence</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="detection-info">
+
+                    <div>
+                        <span>Sequence</span>
+                        <strong>154 frames</strong>
+                    </div>
+
+                    <div>
+                        <span>Features</span>
+                        <strong>63 landmarks</strong>
+                    </div>
+
+                    <div>
+                        <span>Model</span>
+                        <strong>Transformer V5.2</strong>
+                    </div>
+
+                </div>
+
+            </aside>
+
+        </section>
+
+
+        <!-- ================= RECENT PREDICTIONS ================= -->
+
+        <section class="recent-section">
+
+            <div class="section-heading">
+
+                <div>
+                    <p class="eyebrow">HISTORY</p>
+
+                    <h2>Recent predictions</h2>
+                </div>
+
+                <span>Latest recognized gestures</span>
+
+            </div>
+
+
+            <div class="prediction-history">
+
+                <div class="history-empty">
+                    <span>—</span>
+                    <p>
+                        Your recognized gestures will appear here.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+
+        <div class="footer-brand">
+            <div class="brand">
+                <span class="brand-mark">S.</span>
+                <span>SanketSetu</span>
+            </div>
+
+            <p>
+                Bridging hands.<br>
+                Building understanding.
+            </p>
+        </div>
+
+        <div class="footer-links">
+
+            <div>
+                <span>EXPLORE</span>
+                <a href="detect.html">Detect</a>
+                <a href="learn.html">Learn ISL</a> 
+            </div>
+
+            <div>
+                <span>PROJECT</span>
+                <a href="insights.html">Model Insights</a>
+                <a href="about.html">About SanketSetu</a>
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <script src="js/main.js"></script>
+    <script src="js/detect.js"></script>
+
+<script>
+    const themeToggle = document.querySelector(".theme-toggle");
+
+    const savedTheme = localStorage.getItem("sanketsetu-theme");
+
+    if (savedTheme) {
+        document.documentElement.setAttribute("data-theme", savedTheme);
+    }
+
+    themeToggle?.addEventListener("click", () => {
+
+        const currentTheme =
+            document.documentElement.getAttribute("data-theme");
+
+        const newTheme =
+            currentTheme === "light" ? "dark" : "light";
+
+        document.documentElement.setAttribute(
+            "data-theme",
+            newTheme
+        );
+
+        localStorage.setItem(
+            "sanketsetu-theme",
+            newTheme
+        );
+    });
+</script>
+    
+</body>
+</html>
