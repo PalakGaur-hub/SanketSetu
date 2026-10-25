@@ -490,3 +490,24 @@ gap: 35px;
 
     border-radius: inherit;
 }
+
+/* Learn ISL — featured section spacing */
+.learn-more {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 28px;
+}
+
+.learn-more .nav-cta {
+    display: inline-flex;
+    align-items: center;
+    width: fit-content;
+    max-width: 100%;
+    padding: 14px 24px;
+}
+
+#gestureMessage {
+    margin-top: 14px;
+    font-size: 0.9rem;
+    color: var(--text-muted, #a39a96);
+}
